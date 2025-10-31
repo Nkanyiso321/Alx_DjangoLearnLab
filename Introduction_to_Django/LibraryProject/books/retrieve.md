@@ -1,9 +1,5 @@
-# Retrieve Operation
-
 ```python
 from books.models import Book
-Book.objects.all()
-```
-
-# Expected Output:
-<QuerySet [<Book: 1984 by George Orwell (1949)>]>
+books = Book.objects.all()
+for book in books:
+    print(book.title, book.author, book.publication_year)
