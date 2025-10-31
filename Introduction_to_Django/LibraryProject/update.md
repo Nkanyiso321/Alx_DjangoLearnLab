@@ -1,6 +1,16 @@
-from bookshelf.models import Book
-book = Book.objects.get(title='1984')
-book.title = 'Nineteen Eighty-Four'
+
+---
+
+### `update.md`
+
+```markdown
+# Update Operation
+
+```python
+# Update the title
+book = Book.objects.get(title="1984")
+book.title = "Nineteen Eighty-Four"
 book.save()
-book.title
-# Expected output: 'Nineteen Eighty-Four'
+
+# Verify update
+print(book.title)
